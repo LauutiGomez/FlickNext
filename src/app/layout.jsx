@@ -15,22 +15,26 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "FlickNext - Ver peliculas, ver series online Gratis en HD",
-  description: "Web generada con Nextjs simulando una pagina para visualizar peliculas online",
+  description:
+    "Web generada con Nextjs simulando una pagina para visualizar peliculas online",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="/fav-icon.webp" type="image/webp" sizes="32x32" />
+        <link
+          rel="icon"
+          href="/fav-icon.webp"
+          type="image/webp"
+          sizes="32x32"
+        />
       </head>
-      <body>
-      <header className="sticky top-0 w-100% z-10">
-      <NavBar/>
-      </header>
-      <main>
-      {children}
-      </main>
+      <body className="container mx-auto max-w-screen-lg">
+        <header className="sticky top-0 z-10">
+          <NavBar />
+        </header>
+        <main>{children}</main>
       </body>
     </html>
   );
